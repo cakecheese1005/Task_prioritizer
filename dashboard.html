@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-page">
+    <nav>
+        <span>Hello, {{ user }}</span>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+
+    <main>
+        <section class="task-section">
+            <h2>Manage Tasks</h2>
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Task Name" required>
+                <input type="date" id="taskDeadline" required>
+                <input type="number" id="taskUrgency" placeholder="Urgency Score (1-10)" required>
+                <input type="text" id="taskDependencies" placeholder="Dependencies (comma IDs)">
+                <button type="submit">Add Task</button>
+            </form>
+            <button id="prioritizeBtn">Prioritize Tasks</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section class="chart-section">
+            <canvas id="taskChart"></canvas>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

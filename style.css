@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* Use a more generic font-family for better cross-browser compatibility */
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* Or use contain, or media queries for different sizes */
+    color: #fff;
+    /* Ensure good contrast with the background */
+    background-color: #121212; /* Fallback color in case the image fails to load */
+}
+
+.login-container {
+    width: 90%; /* Make it responsive */
+    max-width: 300px; /* But don't let it get too wide */
+    margin: 50px auto; /* Adjust top margin for better spacing */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Make sure the text size is readable */
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for inputs */
+    color: #333; /* Darker text for better readability */
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background: #45a049;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+}
+
+nav span {
+    font-size: 1.1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+
+.task-section,
+.chart-section {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+.task-section h2,
+.chart-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+ul#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+ul#taskList li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Add a border */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transitions */
+}
+
+ul#taskList li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter on hover */
+    transform: translateX(5px); /* Add a small horizontal shift on hover */
+}
+/* Add media query for small screens */
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    input,
+    button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav span {
+        margin-bottom: 10px;
+    }
+  
+    .task-section, .chart-section{
+       margin: 10px;
+       padding: 15px;
+    }
+}
